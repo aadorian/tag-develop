@@ -262,8 +262,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <form id="document-add-form" class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">{% trans "modal window title" %}Add a document{% endtrans %}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -305,7 +304,15 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <form id="document-change-form" class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">{% trans "modal window title" %}Edit{% endtrans %}</h5>
+        <h1
+        class="mb-2ctext-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        Document <span
+          class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">{document}</span>
+      </h1>
+      <a href="" class="text-xs text-gray-500 lg:text-xs dark:text-gray-400">{{project.name}} | {{project.description}}   </a>
+    
+      
+      
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
