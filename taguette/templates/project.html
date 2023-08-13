@@ -332,7 +332,14 @@
       <div class="modal-body">
         <input type="hidden" id="document-change-id" />
         <div class="container">
-
+          <!-- file name-->
+          <div>
+            <label for="document-change-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+            <input class="form-control mb-3" id="document-change-name"
+            name="document-change-name" placeholder="{% trans " document change form placeholder" %}Name{% endtrans
+            %}"  required>
+          </div>
+          <!-- file descriptionn-->
           <div>
             <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
             <input type="description" name="document-change-description"  name="document-change-description"
@@ -341,13 +348,10 @@
             class="form-control" id="document-change-description" 
              required>
            </div>
+           <!-- button-->
+           <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{% trans %}Save & Close{% endtrans %}</button>
+                  
 
-
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <input type="text" class="form-control mb-3" id="document-change-name" name="document-change-name" placeholder="{% trans "document change form placeholder" %}Name{% endtrans %}" required />
-            </div>
-          </div>
           <div class="row">
             <div class="col-12 form-group">
               <div class="form-check form-check-inline">
@@ -363,7 +367,7 @@
          </div>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">{% trans %}Save & Close{% endtrans %}</button>
+ 
         <button type="button" id="document-change-delete" class="btn btn-danger" data-dismiss="modal">{% trans %}Delete document{% endtrans %}</button>
       </div>
     </form>
