@@ -745,6 +745,7 @@ document.getElementById('document-change-delete').addEventListener('click', func
   e.preventDefault();
 
   var doc_id = document.getElementById('document-change-id').value;
+  
   if(!window.confirm(gettext("Are you sure you want to delete the document '%(doc)s'?", {doc: documents[doc_id].name}))) {
     return;
   }
