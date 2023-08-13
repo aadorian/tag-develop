@@ -323,7 +323,7 @@
       </h1>
       <a href="" class="text-xs text-gray-500 lg:text-xs dark:text-gray-400">{{project.name}} | {{project.description}}   </a>
     
-      
+
       
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -332,6 +332,17 @@
       <div class="modal-body">
         <input type="hidden" id="document-change-id" />
         <div class="container">
+
+          <div>
+            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+            <input type="description" name="document-change-description"  name="document-change-description"
+            placeholder="{% trans " document change form placeholder" %}Description{% endtrans %}"
+            value = "{% trans " document change form placeholder" %}Description{% endtrans %}"
+            class="form-control" id="document-change-description" 
+             required>
+           </div>
+
+
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" class="form-control mb-3" id="document-change-name" name="document-change-name" placeholder="{% trans "document change form placeholder" %}Name{% endtrans %}" required />
@@ -349,8 +360,7 @@
               </div>
             </div>
           </div>
-          <textarea class="form-control" id="document-change-description" name="document-change-description" placeholder="{% trans "document change form placeholder" %}Description{% endtrans %}"></textarea>
-        </div>
+         </div>
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-primary">{% trans %}Save & Close{% endtrans %}</button>
