@@ -16,6 +16,9 @@
         <li class="mr-2">
             <button id="statistics-tab" data-tabs-target="#statistics" type="button" role="tab" aria-controls="statistics" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Stats</button>
         </li>
+        <li class="mr-2">
+            <button id="reflexivity-tab" data-tabs-target="#reflexivity" type="button" role="tab" aria-controls="reflexivity" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Reflexivity</button>
+        </li>
     </ul>
     <div id="defaultTabContent">
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
@@ -85,6 +88,12 @@
                     <dt class="mb-2 text-3xl font-extrabold">100s</dt>
                     <dd class="text-gray-500 dark:text-gray-400">Documents</dd>
                 </div>
+            </dl>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="reflexivity" role="tabpanel" aria-labelledby="reflexivity-tab">
+            <dl class="grid max-w-screen-xl">
+                <iframe src="http://localhost:3000" style="width: 100%; height: 100%;"></iframe>
+ 
             </dl>
         </div>
     </div>
