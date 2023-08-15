@@ -74,15 +74,9 @@
             
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="statistics" role="tabpanel" aria-labelledby="statistics-tab">
+                <iframe src="http://localhost:8501" style="width: 100%""></iframe>
             <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
-                <div class="flex flex-col">
-                    <dt class="mb-2 text-3xl font-extrabold">50</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Custom Tag Creation</dd>
-                </div>
-                <div class="flex flex-col">
-                    <dt class="mb-2 text-3xl font-extrabold">10+</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Collaborative Project Tagging</dd>
-                </div>
+           
                 <div class="flex flex-col">
                     <dt class="mb-2 text-3xl font-extrabold">100s</dt>
                     <dd class="text-gray-500 dark:text-gray-400">Documents</dd>
@@ -91,7 +85,7 @@
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="reflexivity" role="tabpanel" aria-labelledby="reflexivity-tab">
             <dl class="grid max-w-screen-xl">
-                <iframe src="http://localhost:3000" style="width: 100%; height: 50%;"></iframe>
+                <iframe src="http://localhost:3000" style="width: 100%; height: 80%;""></iframe>
             </dl>
         </div>
     </div>
@@ -134,10 +128,11 @@
               <span class="sr-only">Close banner</span>
           </button>
       </div>
+      <a id="load-all-tags" class="btn btn-sm btn-primary float-right ml-2" href="/project/{{ project.id }}/highlights/">{% trans %}See all highlights{% endtrans %}</a>
+      <a class="btn btn-sm btn-primary float-right" href="javascript:createTag()">{% trans %}Create a tag{% endtrans %}</a>
+
 </div>
 
-<a id="load-all-tags" class="btn btn-sm btn-primary float-right ml-2" href="/project/{{ project.id }}/highlights/">{% trans %}See all highlights{% endtrans %}</a>
-<a class="btn btn-sm btn-primary float-right" href="javascript:createTag()">{% trans %}Create a tag{% endtrans %}</a>
 
 </html>
 
