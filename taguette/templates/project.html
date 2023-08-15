@@ -122,10 +122,13 @@
       
           </div>
         
-            <p class="mb-3 text-xs text-gray-500 dark:text-gray-400">
-             Upload a new document to the collection.</p>
+          <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              Upload a new document to the collection.</p>
             <p class="text-xs font-extrabold text-gray-900 dark:text-white dark:text-white">{{project.name}} </p>
-            <p class="text-xs text-gray-900 dark:text-white">{{project.description}} 
+            <p class="text-sm text-gray-900 dark:text-white">{{project.description}} 
+              
+            </p>
+            <div>
             <a href="javascript:createDocument()" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               {% trans %}Upload{% endtrans %}
         
