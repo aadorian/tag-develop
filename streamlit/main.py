@@ -28,7 +28,7 @@ for row in cur.execute('SELECT rowid, name,  note FROM db ORDER BY name'):
       note=st.text_area('Note', row[2])
       if st.form_submit_button('Save'):
         cur.execute(
-          'UPDATE db SET name=?, letters=?, note=? WHERE name=?;', 
+          'UPDATE db SET name=?,  note=? WHERE name=?;', 
           (name,  note, str(row[1]))
         )
         con.commit() ; st.experimental_rerun()
