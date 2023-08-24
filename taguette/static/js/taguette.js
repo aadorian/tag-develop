@@ -878,18 +878,19 @@ function updateTagsList() {
     }
     elem.innerHTML =
       '<div class="d-flex justify-content-between align-items-center">' +
+      
       '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">'+
       '<path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />'+
       '<path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />'+
     '</svg>'+
+    '    <span class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-blue-700  border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900" id="tag-' + tag.id + '-count">' + tag.count + '</span>' +
+    
       '  <div class="tag-name">' +
       '    <a id="tag-link-' + tag.id + '">' + escapeHtml(tag.path) + '</a>' +
       '  </div>' +
-      '  <div style="white-space: nowrap;">' +
-      '    <span class="badge badge-secondary badge-pill" id="tag-' + tag.id + '-count">' + tag.count + '</span>' +
-      '    <a href="javascript:editTag(' + tag.id + ');" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">' + gettext("Edit Tag") + '</a>' +
-      '  </div>' +
-   
+       '    <a href="javascript:editTag(' + tag.id + ');" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">' + gettext("Edit Tag") + '</a>' +
+     
+      
       '</div>';
     tags_list.insertBefore(elem, before);
     linkTag(document.getElementById('tag-link-' + tag.id), tag.path);
