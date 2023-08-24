@@ -877,7 +877,7 @@ function updateTagsList() {
       elem.classList.add('tag-current');
     }
     elem.innerHTML =
-      '<div class="d-flex justify-content-between align-items-center">' +
+      '<div class="text-xs text-gray-900 dark:text-white">' +
       
       '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">'+
       '<path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />'+
@@ -888,8 +888,32 @@ function updateTagsList() {
       '  <div class="tag-name text-sm text-gray-900 dark:text-white">' +
       '    <a id="tag-link-' + tag.id + '">' + escapeHtml(tag.path) + '</a>' +
       '  </div>' +
-       '    <a href="javascript:editTag(' + tag.id + ');" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">' + gettext("Edit Tag") + '</a>' +
      
+'<div class="relative overflow-x-auto">'+
+    '<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">'+
+        '<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">'+
+            '<tr>'+
+                '<th scope="col" class="px-6 py-3">'+
+                '    <a href="javascript:editTag(' + tag.id + ');" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">' + gettext("Edit Tag") + '</a>' +
+ 
+                '</th>'+
+            '</tr>'+
+        '</thead>'+
+        '<tbody>'+
+
+            '<tr class="text-xs text-gray-900 dark:text-white>'+
+                '<th scope="row" class="px-6 py-4 font-xs text-gray-900 whitespace-nowrap dark:text-white">'+
+                    tag.description+
+                '</th>'+
+                '<tr class="bg-white dark:bg-gray-800">'+
+                '<th scope="row" class="ptext-xs text-gray-900 dark:text-white">'+
+                    '<a id="tag-link-' + tag.id + '">' + escapeHtml(tag.path) + '</a>' +
+                '</th>'+
+            '</tr>'+
+        '</tbody>'+
+    '</table>'+
+'</div>'+
+
       
       '</div>';
     tags_list.insertBefore(elem, before);
