@@ -452,13 +452,6 @@
 
 <!-- Add/change tag modal -->
 
-
-
-
-
-
-
-
 <div class="modal" id="tag-add-modal" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-centered" role="document">
 
@@ -495,25 +488,25 @@
       </div>
       <div class="modal-body">
 
-          <!-- tag name-->
-          
            <!-- button-->
            <div class="mt-4">
            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{% trans %}Save & Close{% endtrans %}</button>
            </div>     
-           <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-            Delete the document? <a href="#" id="tag-add-delete"  class="text-blue-700 hover:underline dark:text-blue-500"> 
-            {% trans %}Click here{% endtrans %}</a>
-            Merge the document? <a href="#" id="tag-add-merge"  class="text-blue-700 hover:underline dark:text-blue-500"> 
-              {% trans %}Click here{% endtrans %}</a>
-        </div> 
+           <div data-dismiss="modal"  class="text-sm font-medium text-gray-500 dark:text-gray-300">
+              <p class="text-xs text-gray-900 dark:text-white" data-dismiss="modal" >Delete Tag? 
+                <a type="button"  href="#"  id="tag-add-delete" data-dismiss="modal"  class="text-xs text-gray-900 dark:text-white"> {% trans %}Click here{% endtrans %}
+              </p>
+              <p class="text-xs text-gray-900 dark:text-white" data-dismiss="modal" > Merge the tag?
+                <a type="button"  href="#"  id="tag-add-merge"   data-dismiss="modal"  class="text-xs text-gray-900 dark:text-white"> {% trans %}Click here{% endtrans %}
+              </p>
 
-        <div class="modal-footer">
+             </div> 
+
           <button type="button" class="btn btn-info" data-dismiss="modal" id="tag-add-merge">{% trans "button in tag change modal window" %}Merge...{% endtrans %}</button>
           <button type="submit" class="btn btn-primary">{% trans %}Save & Close{% endtrans %}</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal" id="tag-add-cancel">{% trans %}Cancel{% endtrans %}</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal" id="tag-add-delete">{% trans %}Delete tag{% endtrans %}</button>
-        </div>
+   
 
            <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
             <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
