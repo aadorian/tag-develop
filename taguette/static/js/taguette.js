@@ -994,8 +994,15 @@ function updateModalTagsList() {
     }
     elem.className = 'tag-name form-check ' + searchHitClass;
     elem.innerHTML =
-      '<input type="checkbox" class="form-check-input" value="' + tag.id + '" name="highlight-add-tags" id="highlight-add-tags-' + tag.id + '" />' +
-      '<label for="highlight-add-tags-' + tag.id + '" class="form-check-label ">' + escapeHtml(tag.path) + '</label>';
+      '<input type="checkbox" class="form-check-input" value="' + tag.id + '" name="highlight-add-tags" id="highlight-add-tags-' + tag.id + '" />' +   
+      '<label for="highlight-add-tags-' + tag.id + '" class="form-check-label ">'  + 
+      //list of the tag name
+      '<p class="text-sm text-gray-900 dark:text-white">'+
+      escapeHtml(tag.path) + 
+      '</p>' +
+      
+      '<p class="text-xs text-gray-900 dark:text-white">'+
+      tag.description+ '</p>' + '</label>';
     tags_modal_list.insertBefore(elem, before);
   }
   if(entries.length == 0) {
