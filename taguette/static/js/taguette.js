@@ -1000,13 +1000,14 @@ function updateModalTagsList() {
             '<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">'+
                 '<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">'+
                 '<input type="checkbox" class="form-check-input w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" value="' + tag.id + '" name="highlight-add-tags" id="highlight-add-tags-' + tag.id + '" />' +   
-                '<label for="highlight-add-tags-' + tag.id + '" class="form-check-label text-xs font-normal text-gray-400 dark:text-gray-500 ">'  + 
+                '<label for="highlight-add-tags-' + tag.id + '" class="form-check-label text-xs font-normal text-gray-900 ">'  + 
                 //list of the tag name
-                '<p class="text-xs text-gray-500 dark:text-white">'+
+                '<p class="text-xs text-gray-800 dark:text-white">'+
                 escapeHtml(tag.path) + 
                 '</p>' +
-                '<p class="text-xs text-gray-900 dark:text-white">'+
-                tag.description+ '</p>' + '</label>';
+                '<p class="mb-3 text-xs text-gray-600 dark:text-white">'+
+                tag.description+ '</p>' 
+                + '</label>';
                 '</th>'+
             '</tr>'+
         '</tbody>'+
