@@ -149,11 +149,7 @@
                     </div>
                   </div>
           <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              Upload a new document to the collection.</p>
-
-            
-
-
+              Upload a new document to the collection.</p>  
            
             <p class="text-xs font-extrabold text-gray-900 dark:text-white dark:text-white">{{project.name}} </p>
             <p class="text-sm text-gray-900 dark:text-white">{{project.description}} 
@@ -482,7 +478,7 @@
           <input class="form-control mb-3" id="tag-add-path"
           name="tag-add-path" placeholder="{% trans " document change form placeholder" %}Name{% endtrans
           %}"  required>
-
+          <label for="tag-add-description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
            <textarea class="form-control" id="tag-add-description" name="tag-add-description" placeholder="{% trans "tag change form placeholder" %}Description{% endtrans %}"></textarea>
         </div>
       </div>
@@ -499,11 +495,9 @@
                  <a data-dismiss="modal"  href="#" id="tag-add-merge" class="text-blue-700 hover:underline dark:text-blue-500"> 
                 Merge Tag ? {% trans %}Click here{% endtrans %}</a>
             </div> 
-     
+
                 <button type="button"  data-dismiss="modal" id="tag-add-cancel"></button>
                 <!--delete button -->
-             
-              
                 <div class="text-sm font-medium text-gray-500 dark:text-gray-300" data-dismiss="modal">
                  <a href="#" id="tag-add-delete"  class="text-blue-700 hover:underline dark:text-blue-500"> 
                   Delete tag? {% trans %}Click here{% endtrans %}</a>
@@ -522,10 +516,8 @@
                </a> 
             </div>
 
-          </footer>
-             
+          </footer>   
             </div>
-
           </div>
     </form>
 
