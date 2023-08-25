@@ -878,36 +878,37 @@ function updateTagsList() {
     }
     elem.innerHTML =
       '<div class="text-xs text-gray-900 dark:text-white">' +
-      
+     ' <span class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-gray-700 dark:text-gray-400 border border-gray-500">'+
+      '<svg class="w-2.5 h-2.5 mr-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">'+
+      ' <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>'+
+      '</svg>'+
+      '3 days ago'+
+   '</span>'+
+    '<a href="javascript:editTag(' + tag.id + ');" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >' 
+    + gettext("Edit Tag") + '</a>' +
+         
+    '    <span class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-blue-700  border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900" id="tag-' + tag.id + '-count">' + tag.count + '</span>' +
+    
+      '  <div class="tag-name text-sm text-gray-900 dark:text-white">' +
+      '    <a id="tag-link-' + tag.id + '">' + escapeHtml(tag.path) + 
       '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">'+
       '<path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />'+
       '<path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />'+
     '</svg>'+
-    '    <span class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-blue-700  border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900" id="tag-' + tag.id + '-count">' + tag.count + '</span>' +
-    
-      '  <div class="tag-name text-sm text-gray-900 dark:text-white">' +
-      '    <a id="tag-link-' + tag.id + '">' + escapeHtml(tag.path) + '</a>' +
+    '</a>' +
       '  </div>' +
      
 '<div class="relative overflow-x-auto">'+
     '<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">'+
-        '<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">'+
-            '<tr>'+
-                '<th scope="col" class="px-6 py-3">'+
-                '    <a href="javascript:editTag(' + tag.id + ');" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">' + gettext("Edit Tag") + '</a>' +
- 
-                '</th>'+
-            '</tr>'+
-        '</thead>'+
         '<tbody>'+
-
             '<tr class="text-xs text-gray-900 dark:text-white>'+
                 '<th scope="row" class="px-6 py-4 font-xs text-gray-900 whitespace-nowrap dark:text-white">'+
-                    tag.description+
+                    tag.description + 
+                '<a id="tag-link-' + tag.id + '">' + escapeHtml(tag.path) + '</a>' +
                 '</th>'+
-                '<tr class="bg-white dark:bg-gray-800">'+
-                '<th scope="row" class="ptext-xs text-gray-900 dark:text-white">'+
-                    '<a id="tag-link-' + tag.id + '">' + escapeHtml(tag.path) + '</a>' +
+                '<th scope="row" class="px-6 py-4 font-xs text-gray-900 whitespace-nowrap dark:text-white">'+
+                
+              
                 '</th>'+
             '</tr>'+
         '</tbody>'+
