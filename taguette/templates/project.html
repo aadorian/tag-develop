@@ -495,21 +495,18 @@
               <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{% trans %}Save & Close{% endtrans %}</button>
                
               <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
-              <!--merge button -->
-              <button id="tag-add-merge" data-dismiss="modal"  type="button" class="px-2 py-1 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <svg class="w-3 h-3 text-white mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 3l1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 011.743-1.342 48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664L19.5 19.5" />
-                </svg>    
-                {% trans %}Merge tag{% endtrans %}
-              </button>
+              <div  data-dismiss="modal"  class="text-sm font-medium text-gray-500 dark:text-gray-300" data-dismiss="modal">
+                 <a data-dismiss="modal"  href="#" id="tag-add-merge" class="text-blue-700 hover:underline dark:text-blue-500"> 
+                Merge Tag ? {% trans %}Click here{% endtrans %}</a>
+            </div> 
      
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="tag-add-cancel">{% trans %}Cancel{% endtrans %}</button>
+                <button type="button"  data-dismiss="modal" id="tag-add-cancel"></button>
                 <!--delete button -->
              
               
                 <div class="text-sm font-medium text-gray-500 dark:text-gray-300" data-dismiss="modal">
-                  Delete the tag? <a href="#" id="tag-add-delete"  class="text-blue-700 hover:underline dark:text-blue-500"> 
-                  {% trans %}Click here{% endtrans %}</a>
+                 <a href="#" id="tag-add-delete"  class="text-blue-700 hover:underline dark:text-blue-500"> 
+                  Delete tag? {% trans %}Click here{% endtrans %}</a>
               </div> 
              
            <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
