@@ -994,15 +994,25 @@ function updateModalTagsList() {
     }
     elem.className = 'tag-name form-check ' + searchHitClass;
     elem.innerHTML =
-      '<input type="checkbox" class="form-check-input" value="' + tag.id + '" name="highlight-add-tags" id="highlight-add-tags-' + tag.id + '" />' +   
-      '<label for="highlight-add-tags-' + tag.id + '" class="form-check-label ">'  + 
-      //list of the tag name
-      '<p class="text-sm text-gray-900 dark:text-white">'+
-      escapeHtml(tag.path) + 
-      '</p>' +
-      
-      '<p class="text-xs text-gray-900 dark:text-white">'+
-      tag.description+ '</p>' + '</label>';
+    '<div class="relative overflow-x-auto">'+
+    '<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">'+
+        '<tbody>'+
+            '<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">'+
+                '<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">'+
+                '<input type="checkbox" class="form-check-input" value="' + tag.id + '" name="highlight-add-tags" id="highlight-add-tags-' + tag.id + '" />' +   
+                '<label for="highlight-add-tags-' + tag.id + '" class="form-check-label ">'  + 
+                //list of the tag name
+                '<p class="text-sm text-gray-900 dark:text-white">'+
+                escapeHtml(tag.path) + 
+                '</p>' +
+                '<p class="text-xs text-gray-900 dark:text-white">'+
+                tag.description+ '</p>' + '</label>';
+                '</th>'+
+            '</tr>'+
+        '</tbody>'+
+    '</table>'+
+'</div>' +
+     
     tags_modal_list.insertBefore(elem, before);
   }
   if(entries.length == 0) {
