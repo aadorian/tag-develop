@@ -394,7 +394,6 @@
                          <div class="form-check">
                           <input class="form-check-input w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="document-change-direction" id="document-change-direction-rtl" value="RIGHT_TO_LEFT">
                           <label class="text-xs text-right text-gray-400 dark:text-white form-check-label mr-1" for="document-change-direction-rtl">{% trans %}Right to left{% endtrans %}</label>
- 
                 </li>
                 <li>
                   <div class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
@@ -432,6 +431,10 @@
           Find tags: <input id="highlight-search" />
         </div>
         <div class="container">
+          <ul class=""  id="list-group-item">
+            <span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500">Tag</span>
+
+          </ul>
           <ul class="list-unstyled" id="highlight-add-tags">
             <li>{% trans %}Loading...{% endtrans %}</li>
             <li class="special-item-button"><a href="javascript:createTag()">{% trans %}Create a tag{% endtrans %}</a></li>
@@ -479,30 +482,24 @@
           name="tag-add-path" placeholder="{% trans " document change form placeholder" %}Name{% endtrans
           %}"  required>
           <label for="tag-add-description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
-           <textarea class="form-control" id="tag-add-description" name="tag-add-description" placeholder="{% trans "tag change form placeholder" %}Description{% endtrans %}"></textarea>
-        </div>
+           <textarea class="form-control" id="tag-add-description" name="tag-add-description" placeholder="{% trans "tag change form placeholder" %}Description{% endtrans %} "></textarea>
+           </div>
       </div>
-
-
       <div class="modal-body">
-
            <!-- button-->
            <div class="mt-4">
-              <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{% trans %}Save & Close{% endtrans %}</button>
-               
+              <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{% trans %}Save & Close{% endtrans %}</button>   
               <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
               <div  data-dismiss="modal"  class="text-sm font-medium text-gray-500 dark:text-gray-300" data-dismiss="modal">
                  <a data-dismiss="modal"  href="#" id="tag-add-merge" class="text-blue-700 hover:underline dark:text-blue-500"> 
                 Merge Tag ? {% trans %}Click here{% endtrans %}</a>
             </div> 
-
                 <button type="button"  data-dismiss="modal" id="tag-add-cancel"></button>
                 <!--delete button -->
                 <div class="text-sm font-medium text-gray-500 dark:text-gray-300" data-dismiss="modal">
                  <a href="#" id="tag-add-delete"  class="text-blue-700 hover:underline dark:text-blue-500"> 
                   Delete tag? {% trans %}Click here{% endtrans %}</a>
               </div> 
-             
            <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
             <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
 
@@ -515,7 +512,6 @@
                 </svg>
                </a> 
             </div>
-
           </footer>   
             </div>
           </div>
