@@ -238,8 +238,28 @@
   <div class="code-preview-wrapper">
     <div id="font-weight-example" class="flex p-0 bg-white border-gray-200 bg-gradient-to-r code-preview dark:bg-gray-900 border-x dark:border-gray-600">
       <div class="w-full code-responsive-wrapper">
-        <div id="document-contents">
 
+        <!-- ........................ document ---------->
+        <div id="document-view" class="document-view">
+
+        <div id="document-contents">
+          <div id="export-button" class="dropdown" style="display: none;">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdown-export" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {% trans %}Export this view{% endtrans %}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdown-export">
+              <a href="#" class="dropdown-item" data-extension="html">{% trans %}HTML{% endtrans %}</a>
+              <a href="#" class="dropdown-item" data-extension="docx">{% trans %}DOCX{% endtrans %}</a>
+              <a href="#" class="dropdown-item" data-extension="pdf">{% trans %}PDF{% endtrans %}</a>
+              <a href="#" class="dropdown-item" data-extension="xlsx" data-document="false">{% trans %}Excel{% endtrans %}</a>
+              <a href="#" class="dropdown-item" data-extension="csv" data-document="false">{% trans %}CSV{% endtrans %}</a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+  </div>
+      <!-- ........................ document ---------->
       <div class="flex items-center justify-center w-full p-5 bg-white dark:bg-gray-900 hidden" data-component-loader="">
           <div role="status">
             <svg aria-hidden="true" class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,23 +297,13 @@
       </div>
     
   
-    </div>
+  
+  </div>
 
 
-  <div id="document-view" class="document-view">
 
-    <div id="export-button" class="dropdown" style="display: none;">
-      <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdown-export" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {% trans %}Export this view{% endtrans %}
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdown-export">
-        <a href="#" class="dropdown-item" data-extension="html">{% trans %}HTML{% endtrans %}</a>
-        <a href="#" class="dropdown-item" data-extension="docx">{% trans %}DOCX{% endtrans %}</a>
-        <a href="#" class="dropdown-item" data-extension="pdf">{% trans %}PDF{% endtrans %}</a>
-        <a href="#" class="dropdown-item" data-extension="xlsx" data-document="false">{% trans %}Excel{% endtrans %}</a>
-        <a href="#" class="dropdown-item" data-extension="csv" data-document="false">{% trans %}CSV{% endtrans %}</a>
-      </div>
-    </div>
+
+   
 
   
       
@@ -302,10 +312,7 @@
         
                 
        
-      </div>
-      
-        </div>
-    </div>
+     
 
 </div>
 
