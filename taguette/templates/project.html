@@ -104,7 +104,7 @@
                 
                 <!--estas operaciones son llamadas desdde tagglete.js-->
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                  <table class="mt-2 text-sm text-left text-gray-500 dark:text-gray-400">
                     
                     <thead class="text-xs text-gray-700  bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                       <tr>
@@ -121,17 +121,14 @@
             <p id="floating_helper_text" class="mt-2 text-xs text-gray-500 dark:text-gray-400">Remember,
               contributions to this topic should follow our <a href="#"
                 class="text-blue-600 dark:text-blue-500 hover:underline">Community Guidelines</a>.</p>
-      
             </div>
           
         
-          <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div class="mt-2 bg-white border border-gray-200 rounded-lg shadow ">
               Upload a new document to the collection.</p>  
            
-            <p class="text-xs font-extrabold text-gray-900 dark:text-white dark:text-white">{{project.name}} </p>
-            <p class="text-sm text-gray-900 dark:text-white">{{project.description}} 
-              
-            </p>
+                <p class="text-xs font-extrabold text-gray-900 dark:text-white dark:text-white">{{project.name}} </p>
+                <p class="text-sm text-gray-900 dark:text-white">{{project.description}} </p>
             <div>
             <a href="javascript:createDocument()" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               {% trans %}Upload{% endtrans %}
